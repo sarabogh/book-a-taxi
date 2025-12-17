@@ -13,11 +13,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        {/* fallback route in case of wrong path */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </>
   )
